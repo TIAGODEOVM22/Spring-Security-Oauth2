@@ -1,0 +1,22 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: cole-o-client-id-aqui
+            client-secret: cole-o-client-secret-aqui
+      resourceserver:
+        jwt:
+          issuer-uri: https://accounts.google.com
+
+          #http://localhost:8080/login/oauth2/code/google
+          #http://localhost:8080:
+          #Representa o endereço local onde a aplicação está rodando, usando a porta 8080.
+
+          #/login/oauth2/code:
+          #É o endpoint padrão no Spring Security para lidar com respostas de redirecionamento de provedores OAuth 2.0.
+          #Esse caminho é registrado automaticamente pelo Spring Security quando você configura OAuth 2.0 no projeto.
+
+          #google:
+          #Representa o provedor de autenticação que está sendo usado (neste caso, o Google).
